@@ -62,6 +62,7 @@ namespace Assets.Scripts
                 _springJoint.connectedBody = _foodItem.GetComponent<Rigidbody>();
 
                 //todo: set params
+                _springJoint.anchor = new Vector3(0f, 1f, 0f);
                 _springJoint.spring = 500f;
                 _springJoint.damper = 0.1f;
                 _springJoint.tolerance = 0.05f;
