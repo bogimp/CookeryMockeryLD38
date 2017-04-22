@@ -65,6 +65,7 @@ namespace Assets.Scripts
                 _springJoint.spring = 500f;
                 _springJoint.damper = 0.1f;
                 _springJoint.tolerance = 0.05f;
+                _springJoint.enableCollision = true;
             }
 
         }
