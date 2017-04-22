@@ -5,11 +5,16 @@ namespace Assets.Scripts
 {
     public class PlayerActionHandler : MonoBehaviour
     {
+        public float RayGroundDy = 0.3f;
+        public float RayDistance = 1f;
+
         private PlayerControlls _playerControlls;
         private SpringJoint _springJoint;
         private bool isFoodHeld;
-        
-        void Start()
+        private GameObject _foodItem;
+        private float _lastClicked;
+
+        public void Start()
         {
             var payerInput = GetComponent<PlayerInput>();
             if (payerInput)
@@ -19,50 +24,65 @@ namespace Assets.Scripts
         }
 
         // Update is called once per frame
-        void Update()
+        public void Update()
         {
-            isFoodHeld = _playerControlls.action.isHeld;
-        
-            if (isFoodHeld)
-            {
-                GrabFood();
-            }
-            else
+
+            _lastClicked -= Time.deltaTime;            
+            if (_lastClicked > 0f) return;
+
+            isFoodHeld = _playerControlls.action.wasJustPressed;
+            if (!isFoodHeld) return;
+
+            if (_foodItem)
             {
                 FreeItem();
             }
+            else
+            {
+                GrabFood();
+            }
 
+            _lastClicked = 0.5f;
         }
 
         private void FreeItem()
         {
-            if(_springJoint)
+            if (_springJoint)
                 Destroy(_springJoint);
+            _foodItem = null;
         }
 
         private void GrabFood()
         {
-            var foodItem = GetFoodItem();
-            if (foodItem)
+            _foodItem = GetFoodItem();
+            if (_foodItem)
             {
-                if(!_springJoint)
+                if (!_springJoint)
                     _springJoint = gameObject.AddComponent<SpringJoint>();
-                _springJoint.connectedBody = foodItem.GetComponent<Rigidbody>();
+                _springJoint.connectedBody = _foodItem.GetComponent<Rigidbody>();
+
                 //todo: set params
-                _springJoint.spring = 500;
+                _springJoint.spring = 500f;
+                _springJoint.damper = 0.1f;
+                _springJoint.tolerance = 0.05f;
             }
 
         }
 
         private GameObject GetFoodItem()
         {
-            var distance = 1f;
-            var start = this.gameObject.transform.position;
-            var to = transform.forward * distance;
+            var start = this.gameObject.transform.position + (Vector3.up * RayGroundDy);
+            var to = transform.forward * RayDistance;
+
             Ray ray = new Ray(start, to);
             RaycastHit hit;
-            //Debug.DrawLine(start, to);
-            if (!Physics.Raycast(ray, out hit, distance))
+
+#if UNITY_EDITOR
+            // helper to visualise the ground check ray in the scene view
+            Debug.DrawRay(start, to, Color.cyan);
+#endif
+
+            if (!Physics.Raycast(ray, out hit, RayDistance))
             {
                 return null;
             }
