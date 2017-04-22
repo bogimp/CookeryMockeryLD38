@@ -65,6 +65,7 @@ namespace UnityEngine.InputNew
 
 		private static void HandlePlayModeCustomizations()
 		{
+/*
 			// TODO: Fix error.
 			// get_isPlayingOrWillChangePlaymode is not allowed to be called from a MonoBehaviour constructor,
 			// call it in Awake or Start instead. Called from script 'ActionMap' on game object 'MenuActions'.
@@ -83,6 +84,7 @@ namespace UnityEngine.InputNew
 				}
 				s_ActionMapsToCleanUpAfterPlayMode.Clear();
 			}
+*/
 		}
 #endif
 
