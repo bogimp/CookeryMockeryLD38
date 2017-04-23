@@ -13,6 +13,7 @@ namespace Assets.Scripts
         private bool isFoodHeld;
         private GameObject _foodItem;
         private float _lastClicked;
+        private Shader _shader;
 
         public void Start()
         {
@@ -27,7 +28,7 @@ namespace Assets.Scripts
         public void Update()
         {
 
-            _lastClicked -= Time.deltaTime;            
+            _lastClicked -= Time.deltaTime;
             if (_lastClicked > 0f) return;
 
             isFoodHeld = _playerControlls.action.wasJustPressed;
@@ -47,6 +48,16 @@ namespace Assets.Scripts
 
         private void FreeItem()
         {
+            if (!_foodItem) return;
+
+            var renderrer = _foodItem.GetComponent<MeshRenderer>();
+            //foreach (var material in renderrer.materials)
+            var material = renderrer.material;
+            {
+                material.shader = _shader;
+                material.SetFloat("_Outline", 0);
+            }
+
             if (_springJoint)
                 Destroy(_springJoint);
             _foodItem = null;
@@ -61,6 +72,16 @@ namespace Assets.Scripts
                     _springJoint = gameObject.AddComponent<SpringJoint>();
                 _springJoint.connectedBody = _foodItem.GetComponent<Rigidbody>();
 
+                var renderrer = _foodItem.GetComponent<MeshRenderer>();
+                //foreach (var material in renderrer.materials)
+                var material = renderrer.material;
+                {
+                    _shader = material.shader;
+                    material.shader = Shader.Find("Standard (Specular setup) (Outlined)");
+                    material.SetColor("_OutlineColor", Color.white);
+                    material.SetFloat("_Outline", 0.1f);
+                }
+
                 //todo: set params
                 _springJoint.anchor = new Vector3(0f, 1f, 0f);
                 _springJoint.spring = 500f;
@@ -73,8 +94,8 @@ namespace Assets.Scripts
 
         private GameObject GetFoodItem()
         {
-            var start = this.gameObject.transform.position + (Vector3.up * RayGroundDy);
-            var to = transform.forward * RayDistance;
+            var start = this.gameObject.transform.position + (Vector3.up*RayGroundDy);
+            var to = transform.forward*RayDistance;
 
             Ray ray = new Ray(start, to);
             RaycastHit hit;
