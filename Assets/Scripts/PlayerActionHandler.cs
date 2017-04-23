@@ -75,11 +75,14 @@ namespace Assets.Scripts
             if (!_foodItem) return;
 
             var renderrer = _foodItem.GetComponent<MeshRenderer>();
-            //foreach (var material in renderrer.materials)
-            var material = renderrer.material;
+            if (renderrer)
             {
-                material.shader = _shader;
-                material.SetFloat("_Outline", 0);
+                //foreach (var material in renderrer.materials)
+                var material = renderrer.material;
+                {
+                    material.shader = _shader;
+                    material.SetFloat("_Outline", 0);
+                }
             }
 
             if (_springJoint)
@@ -98,13 +101,16 @@ namespace Assets.Scripts
                 _springJoint.connectedBody = _foodItem.GetComponent<Rigidbody>();
 
                 var renderrer = _foodItem.GetComponent<MeshRenderer>();
-                //foreach (var material in renderrer.materials)
-                var material = renderrer.material;
+                if (renderrer)
                 {
-                    _shader = material.shader;
-                    material.shader = Shader.Find("Standard (Specular setup) (Outlined)");
-                    material.SetColor("_OutlineColor", Color.white);
-                    material.SetFloat("_Outline", 0.1f);
+                    //foreach (var material in renderrer.materials)
+                    var material = renderrer.material;
+                    {
+                        _shader = material.shader;
+                        material.shader = Shader.Find("Standard (Specular setup) (Outlined)");
+                        material.SetColor("_OutlineColor", Color.white);
+                        material.SetFloat("_Outline", 0.1f);
+                    }
                 }
 
                 //todo: set params
