@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.InputNew;
 
 namespace Assets.Scripts
@@ -14,9 +15,17 @@ namespace Assets.Scripts
         private GameObject _foodItem;
         private float _lastClicked;
         private Shader _shader;
+        private readonly List<GameObject> _itemsList = new List<GameObject>();
+        private int _curItem = 0;
 
         public void Start()
         {
+            var trigger = gameObject.AddComponent<CapsuleCollider>();
+            trigger.isTrigger = true;
+            trigger.center = new Vector3(0f, 0.7f, 0.6f);
+            trigger.radius = 0.2f;
+            trigger.height = 1.2f;
+
             var payerInput = GetComponent<PlayerInput>();
             if (payerInput)
             {
@@ -36,7 +45,8 @@ namespace Assets.Scripts
 
             if (_foodItem)
             {
-                FreeItem();
+                FreeOrSelectNext();
+                //FreeItem();
             }
             else
             {
@@ -44,6 +54,20 @@ namespace Assets.Scripts
             }
 
             _lastClicked = 0.5f;
+        }
+
+        private void FreeOrSelectNext()
+        {
+            if (_itemsList.Count == 0)
+            {
+                FreeItem();
+            }
+            else
+            {
+                FreeItem();
+                _curItem++;
+                GrabFood();
+            }
         }
 
         private void FreeItem()
@@ -94,6 +118,13 @@ namespace Assets.Scripts
 
         private GameObject GetFoodItem()
         {
+            if (_itemsList.Count == 0) return null;
+            if (_curItem >= _itemsList.Count)
+            {
+                _curItem = 0;
+            }
+            return _itemsList[_curItem];
+
             var start = this.gameObject.transform.position + (Vector3.up*RayGroundDy);
             var to = transform.forward*RayDistance;
 
@@ -113,5 +144,20 @@ namespace Assets.Scripts
             //todo: add layer mask for food
             print(hit.transform.gameObject);
         }
+
+
+        public void OnTriggerEnter(Collider other)
+        {
+            var go = other.gameObject;
+            if (_itemsList.Contains(go)) return;
+            _itemsList.Add(go);
+        }
+
+        public void OnTriggerExit(Collider other)
+        {
+            var go = other.gameObject;
+            _itemsList.Remove(go);
+        }
+
     }
 }
