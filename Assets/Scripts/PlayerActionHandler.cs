@@ -74,7 +74,7 @@ namespace Assets.Scripts
         {
             if (!_foodItem) return;
 
-            var renderrer = _foodItem.GetComponent<MeshRenderer>();
+            var renderrer = _foodItem.GetComponent<Renderer>();
             if (renderrer)
             {
                 //foreach (var material in renderrer.materials)
@@ -100,7 +100,7 @@ namespace Assets.Scripts
 
                 _springJoint.connectedBody = _foodItem.GetComponent<Rigidbody>();
 
-                var renderrer = _foodItem.GetComponent<MeshRenderer>();
+                var renderrer = _foodItem.GetComponent<Renderer>();
                 if (renderrer)
                 {
                     //foreach (var material in renderrer.materials)
