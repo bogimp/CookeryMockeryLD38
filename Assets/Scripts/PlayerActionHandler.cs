@@ -73,8 +73,15 @@ namespace Assets.Scripts
         private void FreeItem()
         {
             if (!_foodItem) return;
-
             var renderrer = _foodItem.GetComponent<Renderer>();
+            if (!renderrer)
+            {
+                renderrer = _foodItem.GetComponentInParent<Renderer>();
+                if (!renderrer)
+                {
+                    renderrer = _foodItem.transform.parent.GetComponentInChildren<Renderer>();
+                }
+            }
             if (renderrer)
             {
                 //foreach (var material in renderrer.materials)
@@ -99,8 +106,16 @@ namespace Assets.Scripts
                 if (!_springJoint) _springJoint = gameObject.AddComponent<SpringJoint>();
 
                 _springJoint.connectedBody = _foodItem.GetComponent<Rigidbody>();
-
                 var renderrer = _foodItem.GetComponent<Renderer>();
+                if (!renderrer)
+                {
+                    renderrer = _foodItem.GetComponentInParent<Renderer>();
+                    if (!renderrer)
+                    {
+                        renderrer = _foodItem.transform.parent.GetComponentInChildren<Renderer>();
+                    }
+                }
+
                 if (renderrer)
                 {
                     //foreach (var material in renderrer.materials)
