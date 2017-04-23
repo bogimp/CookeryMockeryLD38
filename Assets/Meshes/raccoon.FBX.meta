@@ -9,10 +9,88 @@ ModelImporter:
     100002: raccoon_tail
     100004: raccoon001
     100006: raccoon_tail001
+    100008: Bone001
+    100010: Bone001(mirrored)
+    100012: Bone002
+    100014: Bone002(mirrored)
+    100016: r_tail0
+    100018: r_tail1
+    100020: r_tail2
+    100022: r_tail3
+    100024: rac_hand
+    100026: rac_hat
+    100028: rac_head
+    100030: rac_l_arm
+    100032: rac_l_clavice
+    100034: rac_l_eye
+    100036: rac_l_eye_p
+    100038: rac_l_foot
+    100040: rac_l_h
+    100042: rac_l_leg0
+    100044: rac_l_shoulder
+    100046: rac_l_tight
+    100048: rac_leg1
+    100050: rac_neck
+    100052: rac_nose
+    100054: rac_pelvis
+    100056: rac_r_arm
+    100058: rac_r_clavice
+    100060: rac_r_eye
+    100062: rac_r_eye_p
+    100064: rac_r_foot
+    100066: rac_r_h
+    100068: rac_r_hand
+    100070: rac_r_leg0
+    100072: rac_r_leg1
+    100074: rac_r_shoulder
+    100076: rac_r_tight
+    100078: rac_spine0
+    100080: rac_spine1
+    100082: raccoon
+    100084: raccoon_base
     400000: //RootNode
     400002: raccoon_tail
     400004: raccoon001
     400006: raccoon_tail001
+    400008: Bone001
+    400010: Bone001(mirrored)
+    400012: Bone002
+    400014: Bone002(mirrored)
+    400016: r_tail0
+    400018: r_tail1
+    400020: r_tail2
+    400022: r_tail3
+    400024: rac_hand
+    400026: rac_hat
+    400028: rac_head
+    400030: rac_l_arm
+    400032: rac_l_clavice
+    400034: rac_l_eye
+    400036: rac_l_eye_p
+    400038: rac_l_foot
+    400040: rac_l_h
+    400042: rac_l_leg0
+    400044: rac_l_shoulder
+    400046: rac_l_tight
+    400048: rac_leg1
+    400050: rac_neck
+    400052: rac_nose
+    400054: rac_pelvis
+    400056: rac_r_arm
+    400058: rac_r_clavice
+    400060: rac_r_eye
+    400062: rac_r_eye_p
+    400064: rac_r_foot
+    400066: rac_r_h
+    400068: rac_r_hand
+    400070: rac_r_leg0
+    400072: rac_r_leg1
+    400074: rac_r_shoulder
+    400076: rac_r_tight
+    400078: rac_spine0
+    400080: rac_spine1
+    400082: raccoon
+    400084: raccoon_base
     2300000: //RootNode
     2300002: raccoon_tail
     2300004: raccoon001
@@ -25,7 +103,11 @@ ModelImporter:
     4300002: raccoon_tail
     4300004: raccoon_tail001
     4300006: raccoon001
+    7400000: Take 001
     9500000: //RootNode
+    11100000: //RootNode
+    13700000: raccoon
+    13700002: raccoon_tail
   materials:
     importMaterials: 1
     materialName: 0
@@ -40,13 +122,123 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 100
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: raccoon
+        weight: 1
+      - path: raccoon_base
+        weight: 1
+      - path: raccoon_base/rac_pelvis
+        weight: 1
+      - path: raccoon_base/rac_pelvis/r_tail0
+        weight: 1
+      - path: raccoon_base/rac_pelvis/r_tail0/r_tail1
+        weight: 1
+      - path: raccoon_base/rac_pelvis/r_tail0/r_tail1/r_tail2
+        weight: 1
+      - path: raccoon_base/rac_pelvis/r_tail0/r_tail1/r_tail2/r_tail3
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_l_tight
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_l_tight/rac_l_leg0
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_l_tight/rac_l_leg0/rac_leg1
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_l_tight/rac_l_leg0/rac_leg1/rac_l_foot
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_r_tight
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_r_tight/rac_r_leg0
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_r_tight/rac_r_leg0/rac_r_leg1
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_r_tight/rac_r_leg0/rac_r_leg1/rac_r_foot
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_l_clavice
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_l_clavice/rac_l_shoulder
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_l_clavice/rac_l_shoulder/rac_l_arm
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_l_clavice/rac_l_shoulder/rac_l_arm/rac_hand
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_neck
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_neck/rac_head
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_neck/rac_head/Bone001
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_neck/rac_head/Bone001/Bone002
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_neck/rac_head/Bone001(mirrored)
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_neck/rac_head/Bone001(mirrored)/Bone002(mirrored)
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_neck/rac_head/rac_hat
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_neck/rac_head/rac_l_eye_p
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_neck/rac_head/rac_l_eye_p/rac_l_eye
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_neck/rac_head/rac_l_h
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_neck/rac_head/rac_nose
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_neck/rac_head/rac_r_eye_p
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_neck/rac_head/rac_r_eye_p/rac_r_eye
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_neck/rac_head/rac_r_h
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_r_clavice
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_r_clavice/rac_r_shoulder
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_r_clavice/rac_r_shoulder/rac_r_arm
+        weight: 1
+      - path: raccoon_base/rac_pelvis/rac_spine0/rac_spine1/rac_r_clavice/rac_r_shoulder/rac_r_arm/rac_r_hand
+        weight: 1
+      - path: raccoon_base/rac_pelvis/raccoon_tail
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -82,10 +274,10 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    rootMotionBoneName: 
+    rootMotionBoneName: raccoon_base
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
