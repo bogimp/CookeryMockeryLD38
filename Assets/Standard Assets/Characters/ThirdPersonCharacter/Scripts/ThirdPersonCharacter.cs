@@ -71,7 +71,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 			else
 			{
-				HandleAirborneMovement();
+                HandleGroundedMovement(crouch, jump);
+                HandleAirborneMovement();
 			}
 
 			ScaleCapsuleForCrouching(crouch);
@@ -161,11 +162,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		void HandleAirborneMovement()
 		{
-			// apply extra gravity from multiplier:
+            // apply extra gravity from multiplier:
 		    Vector3 extraGravityForce = (Physics.gravity*m_GravityMultiplier) - Physics.gravity;
 			m_Rigidbody.AddForce(extraGravityForce);
-
-			m_GroundCheckDistance = m_Rigidbody.velocity.y < 0 ? m_OrigGroundCheckDistance : 0.01f;
+            m_GroundCheckDistance = m_Rigidbody.velocity.y < 0 ? m_OrigGroundCheckDistance : 0.01f;
 		}
 
 
@@ -175,9 +175,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (jump && !crouch && m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Grounded"))
 			{
                 // jump!
-                //m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z);
+                m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z);
 
-                m_Rigidbody.AddForce(new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z) * 3f, ForceMode.Impulse);
+                //m_Rigidbody.AddForce(new Vector3(m_Rigidbody.velocity.x, m_JumpPower, m_Rigidbody.velocity.z), ForceMode.Acceleration);
                 m_IsGrounded = false;
 				m_Animator.applyRootMotion = false;
 				m_GroundCheckDistance = 0.1f;
