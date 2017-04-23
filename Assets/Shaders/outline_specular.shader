@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 // Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
 
 Shader "Standard (Specular setup) (Outlined)"
@@ -84,7 +86,7 @@ Shader "Standard (Specular setup) (Outlined)"
         v2f vert(appdata v) {
             // just make a copy of incoming vertex data but scaled according to normal direction
             v2f o;
-            o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+            o.pos = UnityObjectToClipPos(v.vertex);
  
             float3 norm   = normalize(mul ((float3x3)UNITY_MATRIX_IT_MV, v.normal));
             float2 offset = TransformViewToProjection(norm.xy);
@@ -99,7 +101,7 @@ Shader "Standard (Specular setup) (Outlined)"
         Pass {
             Name "OUTLINE"
             Tags { 
-                "LightMode" = "Always"                
+                "LightMode" = "Always"
             }
             Cull Front
             ZWrite On
@@ -399,3 +401,7 @@ Shader "Standard (Specular setup) (Outlined)"
 	FallBack "VertexLit"	
 	CustomEditor "CustomStandardShaderGUI"
 }
+
+
+
+
