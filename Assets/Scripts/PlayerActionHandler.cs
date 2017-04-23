@@ -84,6 +84,7 @@ namespace Assets.Scripts
 
             if (_springJoint)
                 Destroy(_springJoint);
+            _springJoint = null;
             _foodItem = null;
         }
 
@@ -92,8 +93,8 @@ namespace Assets.Scripts
             _foodItem = GetFoodItem();
             if (_foodItem)
             {
-                if (!_springJoint)
-                    _springJoint = gameObject.AddComponent<SpringJoint>();
+                if (!_springJoint) _springJoint = gameObject.AddComponent<SpringJoint>();
+
                 _springJoint.connectedBody = _foodItem.GetComponent<Rigidbody>();
 
                 var renderrer = _foodItem.GetComponent<MeshRenderer>();
