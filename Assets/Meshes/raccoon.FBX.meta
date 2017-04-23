@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e272cd48a612f744cb75499cc242fbc2
-timeCreated: 1492970465
+timeCreated: 1492980534
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -119,7 +119,16 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'rac_nose' has translation animation that will
+      be discarded.\n\t'rac_nose' has scale animation that will be discarded.\n\t'rac_r_eye_p'
+      has scale animation that will be discarded.\n\t'rac_l_eye_p' has scale animation
+      that will be discarded.\n\t'rac_l_clavice' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'rac_r_clavice' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'rac_l_tight'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'rac_r_tight'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 3
@@ -244,7 +253,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 0.05
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -265,8 +274,373 @@ ModelImporter:
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
-    human: []
-    skeleton: []
+    human:
+    - boneName: rac_pelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_l_leg0
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_r_leg0
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_leg1
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_r_leg1
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_l_foot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_r_foot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_spine0
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_l_shoulder
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_r_shoulder
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_l_arm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_r_arm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_l_eye_p
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_r_eye_p
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_nose
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_r_hand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: rac_hand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: raccoon(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: raccoon
+      parentName: raccoon(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: raccoon_base
+      parentName: raccoon(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rac_pelvis
+      parentName: raccoon_base
+      position: {x: -0.000000009618273, y: 0.0051201168, z: 0.1970829}
+      rotation: {x: 0.50207996, y: 0.5020855, z: -0.49790588, w: 0.49791136}
+      scale: {x: 1, y: 1, z: 1}
+    - name: r_tail0
+      parentName: rac_pelvis
+      position: {x: -0.037019275, y: 0.000000667572, z: -0.20119217}
+      rotation: {x: 0.48755732, y: 0.5121389, z: 0.51213944, w: -0.48756003}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: r_tail1
+      parentName: r_tail0
+      position: {x: -0.17107895, y: 0.00000007152558, z: 0.000000020259233}
+      rotation: {x: 0.00000004071319, y: 0.0000000017324446, z: 0.042514008, w: 0.99909586}
+      scale: {x: 1, y: 1, z: 1}
+    - name: r_tail2
+      parentName: r_tail1
+      position: {x: -0.13088953, y: 0.0000017404557, z: 0.000000013852744}
+      rotation: {x: 0.000000013883446, y: 0.0000000018710424, z: 0.13356043, w: 0.9910407}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: r_tail3
+      parentName: r_tail2
+      position: {x: -0.1494237, y: -0.000000023841858, z: 0.000000015249663}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rac_l_tight
+      parentName: rac_pelvis
+      position: {x: -0.094124354, y: -0.000000011333824, z: 0.00000008493662}
+      rotation: {x: 0.0023033079, y: -0.005583932, z: 0.8627344, w: 0.50562143}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: rac_l_leg0
+      parentName: rac_l_tight
+      position: {x: -0.15355328, y: 0.0000005331473, z: -0.000000043838323}
+      rotation: {x: -0.00030759253, y: -0.0034691396, z: 0.467858, w: 0.8837968}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: rac_leg1
+      parentName: rac_l_leg0
+      position: {x: -0.099846944, y: -0.00000033831748, z: -0.000000047544933}
+      rotation: {x: 0.007169259, y: -0.07212796, z: 0.023166988, w: 0.99710053}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1}
+    - name: rac_l_foot
+      parentName: rac_leg1
+      position: {x: -0.09204661, y: -0.00000026755728, z: -0.000000019461307}
+      rotation: {x: -0.031689703, y: 0.7747943, z: 0.00023305137, w: 0.63141876}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: rac_r_tight
+      parentName: rac_pelvis
+      position: {x: -0.09412434, y: -0.0000000115484005, z: 0.00000009536743}
+      rotation: {x: -0.002301629, y: -0.0055810134, z: -0.8627344, w: 0.5056214}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+    - name: rac_r_leg0
+      parentName: rac_r_tight
+      position: {x: -0.15355326, y: -0.0000005990267, z: -0.000000023841858}
+      rotation: {x: 0.00030772586, y: -0.0034691552, z: -0.467858, w: 0.8837968}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1.0000001}
+    - name: rac_r_leg1
+      parentName: rac_r_leg0
+      position: {x: -0.09984695, y: 0.00000032857062, z: -0.000000059604645}
+      rotation: {x: -0.0071692, y: -0.07212803, z: -0.023166984, w: 0.99710053}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: rac_r_foot
+      parentName: rac_r_leg1
+      position: {x: -0.09204664, y: 0.00000028312206, z: -0.000000011920929}
+      rotation: {x: 0.031689595, y: 0.7747944, z: -0.00023333002, w: 0.6314185}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: rac_spine0
+      parentName: rac_pelvis
+      position: {x: -0.094136454, y: -4.3251266e-10, z: 0.000000105984874}
+      rotation: {x: 6.698038e-10, y: 0.053625837, z: -0.000000012472345, w: 0.9985611}
+      scale: {x: 1, y: 1, z: 1}
+    - name: rac_spine1
+      parentName: rac_spine0
+      position: {x: -0.14637928, y: -0.0000000010052617, z: -0.00000004172325}
+      rotation: {x: -1.3961862e-17, y: 0.11400725, z: 1.2166621e-16, w: 0.99347997}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: rac_l_clavice
+      parentName: rac_spine1
+      position: {x: -0.15015478, y: 6.662049e-12, z: -0.000000059604645}
+      rotation: {x: -0.108303875, y: -0.12862203, z: 0.7535313, w: 0.63554484}
+      scale: {x: 0.99999994, y: 1.0000004, z: 1.0000001}
+    - name: rac_l_shoulder
+      parentName: rac_l_clavice
+      position: {x: -0.2257506, y: 4.4237822e-10, z: 0.00000003483761}
+      rotation: {x: -0.11897345, y: 0.14873625, z: 0.03013805, w: 0.9812312}
+      scale: {x: 1, y: 0.9999995, z: 1}
+    - name: rac_l_arm
+      parentName: rac_l_shoulder
+      position: {x: -0.13676172, y: -0.000000037020072, z: -0.000000019290018}
+      rotation: {x: -0.08532351, y: -0.07172751, z: -0.11621337, w: 0.9869497}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000001}
+    - name: rac_hand
+      parentName: rac_l_arm
+      position: {x: -0.251015, y: 0.00000009536743, z: 0.000000011920929}
+      rotation: {x: -0.25743917, y: 0.0139074, z: -0.015598497, w: 0.9660685}
+      scale: {x: 1.0000002, y: 0.5089204, z: 0.50892043}
+    - name: rac_neck
+      parentName: rac_spine1
+      position: {x: -0.15015407, y: -0.0000000049570192, z: -0.000000011920929}
+      rotation: {x: 5.7325067e-10, y: 0.031541366, z: -0.00000001816365, w: 0.9995025}
+      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+    - name: rac_head
+      parentName: rac_neck
+      position: {x: -0.099999905, y: 0.00000001061494, z: -0.00000007152558}
+      rotation: {x: 0.00000022140581, y: 0.19940186, z: 0.0000033142949, w: 0.9799178}
+      scale: {x: 1.0000002, y: 0.9999999, z: 1.0000002}
+    - name: Bone001
+      parentName: rac_head
+      position: {x: -0.09686575, y: -0.19140361, z: -0.08007937}
+      rotation: {x: -0.21629718, y: -0.32865474, z: 0.5054139, w: 0.76795727}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: Bone002
+      parentName: Bone001
+      position: {x: -0.13240556, y: 0.0000000063329937, z: 0.0000000018623443}
+      rotation: {x: 6.9314104e-15, y: 4.531658e-16, z: 0.18192464, w: 0.9833125}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bone001(mirrored)
+      parentName: rac_head
+      position: {x: -0.096864276, y: 0.19140027, z: -0.080078505}
+      rotation: {x: 0.21629852, y: -0.3286544, z: -0.5054179, w: 0.7679544}
+      scale: {x: 1.0000002, y: 1, z: 1.0000001}
+    - name: Bone002(mirrored)
+      parentName: Bone001(mirrored)
+      position: {x: -0.13240552, y: 0.00000007163623, z: 0.00000009536743}
+      rotation: {x: -0.00000015516072, y: -0.000000106711234, z: -0.18192469, w: 0.9833125}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: rac_hat
+      parentName: rac_head
+      position: {x: -0.04162603, y: 0.00000039339065, z: -0.20233174}
+      rotation: {x: -0.27820665, y: -0.27820763, z: 0.6500759, w: 0.65007913}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: rac_l_eye_p
+      parentName: rac_head
+      position: {x: -0.18988541, y: -0.11342955, z: 0.14712286}
+      rotation: {x: -0.27820665, y: -0.27820763, z: 0.6500759, w: 0.65007913}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: rac_l_eye
+      parentName: rac_l_eye_p
+      position: {x: 0.011548579, y: 0.0022822618, z: 0.006737566}
+      rotation: {x: 0.000000022787022, y: -2.9167082e-15, z: -0.00000012799865, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: rac_l_h
+      parentName: rac_head
+      position: {x: -0.08977105, y: -0.10929394, z: 0.23267947}
+      rotation: {x: -0.27820662, y: -0.2782077, z: 0.6500759, w: 0.65007913}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: rac_nose
+      parentName: rac_head
+      position: {x: -0.076893665, y: -0.0000009872928, z: 0.28668246}
+      rotation: {x: -0.27820665, y: -0.27820763, z: 0.6500759, w: 0.65007913}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: rac_r_eye_p
+      parentName: rac_head
+      position: {x: -0.18988454, y: 0.11342931, z: 0.14712358}
+      rotation: {x: -0.27820665, y: -0.27820763, z: 0.6500759, w: 0.65007913}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: rac_r_eye
+      parentName: rac_r_eye_p
+      position: {x: -0.011548603, y: 0.0022822858, z: 0.0067375186}
+      rotation: {x: 0.000000022787022, y: -2.9167082e-15, z: -0.00000012799865, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: rac_r_h
+      parentName: rac_head
+      position: {x: -0.08977021, y: 0.10929924, z: 0.23268016}
+      rotation: {x: -0.27820662, y: -0.2782077, z: 0.6500759, w: 0.65007913}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: rac_r_clavice
+      parentName: rac_spine1
+      position: {x: -0.15015474, y: -0.0000005304814, z: -0.00000009536743}
+      rotation: {x: 0.10830596, y: -0.12861934, z: -0.75353086, w: 0.63554555}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000004}
+    - name: rac_r_shoulder
+      parentName: rac_r_clavice
+      position: {x: -0.22575055, y: 0.000000017881394, z: 0.00000009536743}
+      rotation: {x: 0.11897349, y: 0.14873639, z: -0.03013822, w: 0.9812311}
+      scale: {x: 0.99999976, y: 0.99999994, z: 0.99999964}
+    - name: rac_r_arm
+      parentName: rac_r_shoulder
+      position: {x: -0.13676174, y: 0.00000009536743, z: -0.00000009536743}
+      rotation: {x: 0.085323974, y: -0.07172802, z: 0.11621327, w: 0.9869496}
+      scale: {x: 1.0000001, y: 0.9999997, z: 0.99999994}
+    - name: rac_r_hand
+      parentName: rac_r_arm
+      position: {x: -0.251015, y: -0.00000019073487, z: 0.00000019073487}
+      rotation: {x: 0.25743914, y: 0.013907411, z: 0.015598539, w: 0.96606857}
+      scale: {x: 1.0000004, y: 0.54797184, z: 0.54797155}
+    - name: raccoon_tail
+      parentName: rac_pelvis
+      position: {x: -0.035146307, y: 0.00000071525574, z: -0.20150161}
+      rotation: {x: 0.50208175, y: 0.5020835, z: -0.49790794, w: -0.49790958}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -280,7 +654,7 @@ ModelImporter:
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
