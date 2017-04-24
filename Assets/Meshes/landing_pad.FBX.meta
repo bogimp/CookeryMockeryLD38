@@ -6,10 +6,25 @@ ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: landing_pad_button
+    100004: landing_pad_button_spawn
+    100006: landing_pad_screen
     400000: //RootNode
+    400002: landing_pad_button
+    400004: landing_pad_button_spawn
+    400006: landing_pad_screen
     2300000: //RootNode
+    2300002: landing_pad_button
+    2300004: landing_pad_button_spawn
+    2300006: landing_pad_screen
     3300000: //RootNode
+    3300002: landing_pad_button
+    3300004: landing_pad_button_spawn
+    3300006: landing_pad_screen
     4300000: landing_pad
+    4300002: landing_pad_button_spawn
+    4300004: landing_pad_button
+    4300006: landing_pad_screen
     9500000: //RootNode
   materials:
     importMaterials: 1
